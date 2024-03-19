@@ -1,0 +1,33 @@
+
+
+
+Create new LyricDB instance:
+
+    try:
+        # Create a new LyricDB object
+        lyric_db = LyricDB.LyricDB()
+
+        #init
+        lyric_db.init(<URI>, <Name>)
+
+        # Print the database connection details
+        print(lyric_db)
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        print("Exiting...")
+
+
+Connect to LyricDB on cloud: on home machine
+
+    lyricDB = LyricDB()
+    lyricDB.connect(f"mongodb://admin:3Jg92Z%C2%A3%7CHX8ow%24VT%3Dk%5D'%7BVS@35.214.80.148:27017/?authSource=admin", 'DB')
+    # hardcoded connect to DB - not secure but use for now
+    # Read json from file and put it in the database
+
+
+
+To get Token details:
+    lyricDB.getToken(<token>)
+
+To get Track details:
+    lyricDB.get_song_details(<song_details>)
